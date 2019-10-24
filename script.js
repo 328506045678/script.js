@@ -6,12 +6,22 @@ function binary2hex(){
 var box = parseInt(box1, 2).toString(16)// Math for Binary to Hex
 
 document.getElementById('box2').value = box // putting the Hex into the input box2
- // (n = 0; n < hex.length; n += 2)
-
- 
-
 
 }
 
-
-
+function a2hex(str) {
+    var arr = [];
+    for (var i = 0, l = str.length; i < l; i ++) {
+      var hex = Number(str.charCodeAt(i)).toString(16);
+      arr.push(hex);
+    }
+    return arr.join('box3');
+  }
+  
+  function hex2a(hexx) {
+      var hex = hexx.toString();//force conversion
+      var str = '';
+      for (var i = 0; i < hex.length; i += 2)
+          str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+      return str;
+  }
